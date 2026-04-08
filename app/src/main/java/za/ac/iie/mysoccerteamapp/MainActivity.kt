@@ -25,11 +25,19 @@ class MainActivity : AppCompatActivity() {
         teams[0]= "Lionee Messi :)"
         //assigned array content to  a variable
         var teamdisplay= ""
-            teamdisplay += "${teams[0]}\n"
-            teamdisplay += "${teams[1]}\n"
-            teamdisplay += "${teams[2]}\n"
-            teamdisplay += "${teams[3]}\n"
-            teamdisplay += "${teams[4]}\n"
+//            teamdisplay += "${teams[0]}\n"
+//            teamdisplay += "${teams[1]}\n"
+//            teamdisplay += "${teams[2]}\n"
+//            teamdisplay += "${teams[3]}\n"
+//            teamdisplay += "${teams[4]}\n"
+//
+        var count = 0
+        while (count < 5){
+            teamdisplay += "${teams[count]}\n"
+            count++
+        }
+        // displaying all the content of the array
+        teamText.text= teamdisplay
 
 
 
