@@ -21,10 +21,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         // creating a variable to hold the textView
         val teamText = findViewById<TextView>(R.id.teamdisplay)
-        // displaying array items in textView
         // assigned position 0 of team array to a new value
         teams[0]= "Lionee Messi :)"
-        
+        //assigned array content to  a variable
+        var teamdisplay= ""
+            teamdisplay += "${teams[0]}\n"
+            teamdisplay += "${teams[1]}\n"
+            teamdisplay += "${teams[2]}\n"
+            teamdisplay += "${teams[3]}\n"
+            teamdisplay += "${teams[4]}\n"
+
+
 
 
 
