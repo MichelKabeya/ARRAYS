@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
 //            teamdisplay += "${teams[2]}\n"
 //            teamdisplay += "${teams[3]}\n"
 //            teamdisplay += "${teams[4]}\n"
-//FOR loop to loop to the array and display all its values
 //      var count = 0
+        //FOR loop to loop to the array and display all its values
         for (team in teams){
             teamdisplay += "${teams}\n"
         }
@@ -42,10 +42,6 @@ class MainActivity : AppCompatActivity() {
 //        }
         // displaying all the content of the array
         teamText.text= teamdisplay
-
-
-
-
 
 
 
