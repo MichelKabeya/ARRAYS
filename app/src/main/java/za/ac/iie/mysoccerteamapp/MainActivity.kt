@@ -30,12 +30,16 @@ class MainActivity : AppCompatActivity() {
 //            teamdisplay += "${teams[2]}\n"
 //            teamdisplay += "${teams[3]}\n"
 //            teamdisplay += "${teams[4]}\n"
-//
-        var count = 0
-        while (count < 5){
-            teamdisplay += "${teams[count]}\n"
-            count++
+//FOR loop to loop to the array and display all its values
+//      var count = 0
+        for (team in teams){
+            teamdisplay += "${teams}\n"
         }
+//)
+//        while (count < 5){
+//            teamdisplay += "${teams[count]}\n"
+//            count++
+//        }
         // displaying all the content of the array
         teamText.text= teamdisplay
 
