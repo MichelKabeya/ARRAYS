@@ -9,6 +9,18 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Arrays
 
+// create a fonction to find the shortest string in an array of strings
+fun getShortestString(arr:Array<String>):String{
+    var shortestLength = 0
+    var shortestElement = ""
+    for (element in arr){
+        if (element.length < shortestLength){
+            shortestLength = element.length
+            shortestElement = element
+        }
+    }
+    return shortestElement
+}
 // log the content of an array of strings
 fun logArrayValues(arr:Array<String>, limit:Int = 0) {
     if (limit == 0) {
@@ -31,14 +43,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        // call the method to log values
-        logArrayValues(teams)
-        logArrayValues(teams, 3)
-
+        // call the method to find the shortest string in the array
+        var shortestName = getShortestString(teams)
+        Log.v("Shortest Name", shortestName)
         // creating a variable to hold the textView
         val teamText = findViewById<TextView>(R.id.teamdisplay)
         // assigned position 0 of team array to a new value
         teams[0]= "Lionee Messi :)"
+
+        // call the method to log values
+        logArrayValues(teams)
+        logArrayValues(teams, 3)
+
+
         //assigned array content to  a variable
         var teamdisplay= ""
 //            teamdisplay += "${teams[0]}\n"
