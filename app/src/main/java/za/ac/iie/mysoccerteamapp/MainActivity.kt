@@ -1,11 +1,23 @@
 package za.ac.iie.mysoccerteamapp
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.util.Arrays
+
+// log the content of an array of strings
+fun logArrayValues(arr:Array<String>, limit:Int = 0) {
+    if (limit == 0) {
+        Log.v("Array Values", arr.toString())
+    }else
+        Log.v("Array Values", Arrays.toString(
+            arr.sliceArray(0..limit - 1)
+        ))
+}
 
 class MainActivity : AppCompatActivity() {
     val teams = arrayOf<String>(
@@ -19,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+        // call the method to log values
+        logArrayValues(teams)
+        logArrayValues(teams, 3)
+
         // creating a variable to hold the textView
         val teamText = findViewById<TextView>(R.id.teamdisplay)
         // assigned position 0 of team array to a new value
