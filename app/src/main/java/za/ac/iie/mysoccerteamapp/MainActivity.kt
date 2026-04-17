@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 //      var count = 0
         //FOR loop to loop to the array and display all its values
         for (team in teams){
-            teamdisplay += "${teams}\n"
+            teamdisplay += "${team}\n"
         }
 //)
 //        while (count < 5){
